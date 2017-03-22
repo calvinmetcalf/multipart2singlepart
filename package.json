@@ -22,7 +22,7 @@
   "homepage": "https://github.com/calvinmetcalf/multipart2singlepart#readme",
   "dependencies": {
     "geojson-stream": "0.0.1",
-    "readable-stream": "^2.2.6"
+    "syncthrough": "^0.5.0"
   },
   "devDependencies": {
     "tape": "^4.6.3"

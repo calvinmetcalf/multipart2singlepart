@@ -1,6 +1,6 @@
 var test = require('tape');
 var m2sfac = require('./');
-
+var PassThrough = require('stream').PassThrough;
 test('should work', t=>{
   var m2s = m2sfac();
   var expected = [
@@ -116,10 +116,13 @@ test('should work', t=>{
     }
   ];
   t.plan(expected.length + 1);
-  m2s.on('data', d=>{
+  var out = m2s.pipe(new PassThrough({
+    objectMode: true
+  }));
+  out.on('data', d=>{
     t.deepEqual(d, expected.shift());
   });
-  m2s.on('finish', ()=>{
+  out.on('finish', ()=>{
     t.ok(true, 'done');
   });
   m2s.write({
