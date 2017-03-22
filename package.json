@@ -1,0 +1,30 @@
+{
+  "name": "multipart2singlepart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "bin": {
+    "m2s": "./bin.js",
+    "multipart2singlepart": "./bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinmetcalf/multipart2singlepart.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvinmetcalf/multipart2singlepart/issues"
+  },
+  "homepage": "https://github.com/calvinmetcalf/multipart2singlepart#readme",
+  "dependencies": {
+    "geojson-stream": "0.0.1",
+    "readable-stream": "^2.2.6"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
